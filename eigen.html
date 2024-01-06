@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Matrix Eigenvalue Calculator</title>
+<script>
+function calculateEigenvalues() {
+    var a = parseFloat(document.getElementById('a').value);
+    var b = parseFloat(document.getElementById('b').value);
+    var c = parseFloat(document.getElementById('b').value);
+    var d = parseFloat(document.getElementById('d').value);
+
+    // Calculate the discriminant
+    var discriminant = (a + d) * (a + d) - 4 * (a * d - b * c);
+
+    // Check for real eigenvalues
+    if (discriminant < 0) {
+        alert("No Real Eigenvalues. Password: 243564");
+    } else {
+        alert("Has Real Eigenvalues. Password: 9357202");
+    }
+}
+</script>
+</head>
+<body>
+<h3>Matrix Eigenvalue Calculator</h3>
+<p>Enter the values for a 2x2 matrix:</p>
+<input type="number" id="a" placeholder="a">
+<input type="number" id="b" placeholder="b">
+<input type="number" id="c" placeholder="c">
+<input type="number" id="d" placeholder="d">
+<button onclick="calculateEigenvalues()">Calculate</button>
+</body>
+</html>
